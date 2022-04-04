@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8"/>
+    <title>Course Description</title>
+    <link href="styling.css" rel="stylesheet" type="text/css" />
+    <script src="interaction.js" type="text/javascript"></script>
+  </head>
+  
+  <body onload="changeDescription(sessionStorage.getItem('id'))">
+
+     <!-- Top navigation bar --> 
+     <div>
+      <ul>
+        <li class="circle">A</li>
+        <li>My Schedule</li>
+        <li>Starred Courses</li>
+        <li><a class="nav_select" href="browsing.html">Schedule of Classes</a></li>
+        <li class="logo"> <img src="https://www.drupal.org/files/CMU_Logo_Stack_Red.png" height=50 alt="CMU Logo"></li>
+      </ul>     
+    </div>
+
+    <!-- Course description card -->
+    <div class="description_card">
+
+      <div class="description_spacing">
+        <div class="course_title" id="course_name">xx-xxx Lorem Ipsum</div>
+      </div>
+
+      <div class="description_spacing">
+        <div class="row">
+
+          <!-- Left Column -->
+          <div class="column">
+            <div class="course_info">Units: 12</div>
+            <div class="course_info" id="course_instructor">Instructor: Ipsum, Lorem</div>
+            <div class="course_info" id="course_available">Status: Available</div>  
+          </div>
+
+          <!-- Right Column -->
+          <div class="column">
+            <div class="course_info" id="course_days">Days: Tuesday, Thursday</div>
+            <div class="course_info" id="course_time">Time: 08:00 - 09:50</div>
+            <div class="course_info">Location: 3SC-172</div>  
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="description_spacing">
+        <br>
+        <br>
+        <br>
+      </div>
+      
+      <!-- Course Description -->
+      <div class="description_spacing">
+        <div class="subheading">Description</div>
+        <div class="course_description" id="course_description">Placeholder description</div>
+      </div>
+  
+      <!-- Course Sections -->
+      <div class="description_spacing">
+        <div class="subheading">Sections</div>
+
+        <div>
+          <span class="section_description">A</span>
+          <span class="section_description" id="course_section_A_day">TR</span>
+          <span class="section_description" id="course_section_A_time">08:00 - 09:50</span>
+          <div class="section_circle"></div>
+        </div>
+
+        <div>
+          <span class="section_description">B</span>
+          <span class="section_description" id="course_section_B_day">TR</span>
+          <span class="section_description" id="course_section_B_time">10:00 - 11:50</span>
+          <div class="section_circle"></div>
+        </div>
+            
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="description_spacing">
+        <div class="row">
+
+          <!-- Left Column -->
+          <div class="column">
+            <a class="button_variant" id="column_left" href="browsing.html">Back</a>
+          </div>
+
+          <!-- Right Column -->
+          <div class="column">
+            <a class= "button" id="column_right" onclick="confirmRegistration()">Register</a>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>

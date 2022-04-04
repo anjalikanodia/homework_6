@@ -1,0 +1,506 @@
+/***************************           Login Page            *******************************/
+
+/* Dividing the screen into 2 vertical halves */
+.divide {
+  height: 100%;
+  width: 50%;
+  top: 0;
+  position: fixed; /* so that the division stays intact even when page is scrolled */
+}
+
+/* Positioning the left side and assigning color */
+.leftside {
+  left: 0;
+  background-color: #E9E9E9;
+}
+
+/* Positioning the right side and assignng color */
+.rightside {
+  right: 0;
+  background-color: white;
+}
+
+/* Centering content within one half of the page */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Determining image size within centered container */
+.centered img {
+  width: 335px;
+}
+
+/* External reference for code till this point: https://www.w3schools.com/howto/howto_css_split_screen.asp */
+
+form {
+  width: 335px;
+  text-align: left;
+  line-height: 30px;
+  height: 80%;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #939393;
+}
+
+input {
+  width: 335px;
+  height: 40px;
+  border: none;
+  background-color: #E9E9E9;
+  text-align: left;
+  padding-left: 10px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+
+}
+
+/***************************           Browsing Page            *******************************/
+
+/* Top Navigation bar */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+
+ul {
+  margin: 0;
+  background-color: #E9E9E9;
+  height: 80px;
+  list-style-type: none; /* to remove the bullet points */
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+  padding: 25px 25px;
+
+}
+
+.active {
+    font-weight: bold;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  margin-top: 9px;
+  margin-right: 40px;
+  margin-left: 20px;
+  border: 1px solid black;
+  color: black;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo {
+  float: left;
+  padding-top: 15px;
+  padding-left: 0px;
+}
+
+.section_spacing {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* Design Grammar including h1-h6, p1-p2, buttons */
+
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+}
+
+h3 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+h4 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+}
+
+h5 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+h6 {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+}
+
+p {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+}
+
+.p1 {
+  font-weight: bold;
+}
+
+.p2 {
+  font-weight: normal;
+}
+
+.course_name {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  color: black;
+}
+
+.instructor_name {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  font-weight: 300;
+}
+
+
+/* Formatting text within cards */
+
+.card_spacing{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#right {
+  text-align: right;
+  color: #939393;
+}
+
+.button {
+  height: 40px;
+  width: 144px;
+  background-color: #BB0000;
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.button_variant {
+    height: 40px;
+    width: 144px;
+    background-color: white;
+    color: black;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+  
+
+/* Header */
+.header {
+  padding-left: 40px;
+  text-align: left;
+  display: inline;
+}
+
+#header_right {
+  float: right;
+  margin-right: 40px;
+  padding: 0px;
+  height: 40px;
+  width: 144px;
+  text-align: center;
+}
+
+.department_spacing {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+}
+
+.department {
+  display: inline;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+}
+
+.card {
+  height: 200px;
+  left: 80px;
+  border: none;
+  background-color: #F4F4F4;
+  border-radius: 30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+} 
+
+.available {
+  color: #429600;
+}
+
+.unavailable {
+  color: #BB0000;
+}
+
+.grayed {
+  opacity: 40%
+}
+
+/***************************           Course Description            *******************************/
+
+.description_card {
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 960px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: left;
+  border: solid 1px black;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+} 
+
+
+.description_spacing {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Text styling */
+
+.course_title {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+}
+
+.course_info {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: black;
+}
+
+.subheading {
+  text-align: left;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: black;
+}
+
+.course_description {
+  text-align: left;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: black;
+}
+
+.section_description {
+  text-align: left;
+  display: inline;
+  padding-right: 20px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: black;
+}
+
+#course_available {
+  color: #429600;
+}
+
+/* For displaying information in columns like course info on top and buttons below */
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column_left {
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+#column_right {
+  float: right;
+  right: 60px;
+  height: 40px;
+  width: 144px;
+  text-align: center;
+  padding: 0;
+}
+
+.section_circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  background: white;
+  border: 1px solid #BB0000;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.a_black {
+    color: black;
+    text-decoration: none;
+}
+
+/***************************           My Schedule (Cart Page)            *******************************/
+
+.units {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: black;
+  text-align: right;
+  display: inline;
+  float: right;
+  padding-right: 60px;
+}
+
+table {
+  text-align: center;
+}
+
+/* to center the table on the page */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weekdays {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: black;
+}
+
+.hour{
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  text-align: right;
+  padding-right: 20px;
+  vertical-align: bottom;
+}
+
+.cell_light {
+  width: 240px;
+  height: 45px;
+  background-color: #F4F4F4;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #F4F4F4;
+}
+
+.cell_dark {
+  width: 240px;
+  height: 45px;
+  background-color: #E9E9E9;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #E9E9E9;
+}
+
+.nav_select {
+  color: black;
+}
+
+/* #booked_0 {
+  background-color: #BB0000;
+  border-left: 5px solid #870000;
+  visibility: hidden;
+}
+
+#booked_1 {
+    background-color: #BB0000;
+    border-left: 5px solid #870000;
+    visibility: hidden;
+  }
+
+#booked_2 {
+  background-color: #BB0000;
+  border-left: 5px solid #870000;
+  visibility: hidden;
+} */
+
+/* #booked_3 {
+    background-color: #BB0000;
+    border-left: 5px solid #870000;
+  } */

@@ -482,25 +482,22 @@ table {
   color: black;
 }
 
-/* #booked_0 {
+#booked_0 {
   background-color: #BB0000;
   border-left: 5px solid #870000;
-  visibility: hidden;
 }
 
 #booked_1 {
     background-color: #BB0000;
     border-left: 5px solid #870000;
-    visibility: hidden;
-  }
+}
 
 #booked_2 {
   background-color: #BB0000;
   border-left: 5px solid #870000;
-  visibility: hidden;
-} */
+} 
 
-/* #booked_3 {
+#booked_3 {
     background-color: #BB0000;
     border-left: 5px solid #870000;
-  } */
+}

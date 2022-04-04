@@ -26,3 +26,16 @@ function changeDescription(id) {
     document.getElementById("course_time").textContent = courses_list[id].time;
     document.getElementById("course_description").textContent = courses_list[id].description;
 }
+
+function addCourseToRegisteredList () {
+    var registered_courses = []
+
+}
+
+function showInSchedule() {
+
+}
+
+function hideInSchedule() {
+
+}

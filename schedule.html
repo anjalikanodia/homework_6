@@ -7,7 +7,7 @@
     <link href="styling.css" rel="stylesheet" type="text/css" />
   </head>
   
-  <body>
+  <body onload="showInSchedule(register_id)">
 
     <!-- Top navigation bar --> 
     <div>
@@ -64,9 +64,9 @@
       <tr>
         <td class="hour">11:00</td>
         <td class="cell_light"></td>
-        <td class="cell_dark">Urbanism</td>
+        <td class="cell_dark" id="booked_1">Urbanism</td>
         <td class="cell_light"></td>
-        <td class="cell_dark">Urbanism</td>
+        <td class="cell_dark" id="booked_1">Urbanism</td>
         <td class="cell_light"></td>
       </tr>
 
@@ -93,9 +93,9 @@
       <!-- Row 6 -->
       <tr>
         <td class="hour">14:00</td>
-        <td class="cell_light">Studio: Foundation I</td>
+        <td class="cell_light" id="booked_0">Studio: Foundation I</td>
         <td class="cell_dark"></td>
-        <td class="cell_light">Studio: Foundation I</td>
+        <td class="cell_light" id="booked_0">Studio: Foundation I</td>
         <td class="cell_dark"></td>
         <td class="cell_light"></td>
       </tr>
@@ -114,9 +114,9 @@
       <tr>
         <td class="hour">16:00</td>
         <td class="cell_light"></td>
-        <td class="cell_dark">Environment I: Climate</td>
+        <td class="cell_dark" id="booked_2">Environment I: Climate</td>
         <td class="cell_light"></td>
-        <td class="cell_dark">Environment I: Climate</td>
+        <td class="cell_dark" id="booked_2">Environment I: Climate</td>
         <td class="cell_light"></td>
       </tr>
 
@@ -157,7 +157,7 @@
         <td class="cell_dark"></td>
         <td class="cell_light"></td>
         <td class="cell_dark"></td>
-        <td class="cell_light">Electronic Media</td>
+        <td class="cell_light"id="booked_3">Electronic Media</td>
       </tr>
 
       <!-- Row 13 -->

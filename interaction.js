@@ -27,9 +27,10 @@ function changeDescription(id) {
     document.getElementById("course_description").textContent = courses_list[id].description;
 }
 
-function addCourseToRegisteredList () {
-    var registered_courses = []
-
+// Add course for which user hits 'Register' to list of registered courses
+var registered_courses = []
+function addCourseToRegisteredList (id) {
+    registered_courses.push(courses_list[id]) 
 }
 
 function showInSchedule() {

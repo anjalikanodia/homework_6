@@ -49,29 +49,41 @@ function confirmRegistration(id) {
 }
 
 function showInSchedule() { 
+    // 1 > Retrieve list of courses user has registered for from local storage 
     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
-    console.log("Registered list looks like this:", registered_courses);
+    // console.log("Registered list looks like this:", registered_courses);
     for (course_index in registered_courses) {
-        console.log("Registered list still looks like this:", registered_courses);
-        console.log("Current course ID is:", registered_courses[course_index]);
-        console.log("Now getting every occurence of this course during the week");
+        // console.log("Registered list still looks like this:", registered_courses);
+        // console.log("Current course ID is:", registered_courses[course_index]);
+        // console.log("Now getting every occurence of this course during the week");
         var list_of_courses_to_be_added = document.getElementsByName("registered_course_"+registered_courses[course_index]);
-        console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
-        console.log(list_of_courses_to_be_added);
+        // console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
+        // console.log("These are the courses to be added to the schedule",list_of_courses_to_be_added);
+        // For each item in list, run a function that removes CSS styling class that hides the course card
         list_of_courses_to_be_added.forEach(removeHidingClass);
-
         function removeHidingClass(course_instance) {
             course_instance.classList.remove("hide_course");
         }
     }
 }
 
+// JS Functionality #3: Removing course from My Schedule 
 
-// function removeCourse(id)
-// {
-//     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
-//     // remove an item from an array (registered_courses)
-//     localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
-//     showInSchedule()
-// }
-
+function removeFromSchedule(id) {
+    registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
+    var registered_courses = registered_courses.map(str => {
+        return Number(str);
+        });
+    console.log("The current IDs of registered courses are:", registered_courses);
+    console.log("The course we would like to delete is", id);
+    var index_of_deleted_course = registered_courses.indexOf(id,0);
+    console.log("The item index of this course in the array is:",registered_courses.indexOf(id,0));
+    if (index_of_deleted_course > -1) {
+        console.log("Since index of course to be deleted is not undefined, proceeding to remove...")
+        registered_courses.splice(index_of_deleted_course, 1);
+    }
+    console.log(registered_courses)
+    localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
+    showInSchedule();
+    document.location.reload();
+}

@@ -51,16 +51,16 @@ function confirmRegistration(id) {
 function showInSchedule() { 
     // 1 > Retrieve list of courses user has registered for from local storage 
     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
-    // console.log("Registered list looks like this:", registered_courses);
+    console.log("Registered list looks like this:", registered_courses);
     for (course_index in registered_courses) {
-        // console.log("Registered list still looks like this:", registered_courses);
-        // console.log("Current course ID is:", registered_courses[course_index]);
-        // console.log("Now getting every occurence of this course during the week");
-        var list_of_courses_to_be_added = document.getElementsByName("registered_course_"+registered_courses[course_index]);
-        // console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
-        // console.log("These are the courses to be added to the schedule",list_of_courses_to_be_added);
+        console.log("Registered list still looks like this:", registered_courses);
+        console.log("Current course ID is:", registered_courses[course_index]);
+        console.log("Now getting every occurence of this course during the week");
+        var list_of_courses_to_be_added = document.getElementsByClassName("registered_course_"+registered_courses[course_index]);
+        console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
+        console.log("These are the courses to be added to the schedule",list_of_courses_to_be_added);
         // For each item in list, run a function that removes CSS styling class that hides the course card
-        list_of_courses_to_be_added.forEach(removeHidingClass);
+        Array.from(list_of_courses_to_be_added).forEach(removeHidingClass);
         function removeHidingClass(course_instance) {
             course_instance.classList.remove("hide_course");
         }

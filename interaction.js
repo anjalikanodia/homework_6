@@ -41,7 +41,7 @@ function confirmRegistration(id) {
     }
     if(registered_courses.includes(id) === false) {
         // 2 > If course not already in list, confirm registration through visual feedback
-        alert('Course successfully added to your schedule!');
+        alert('SUCCESS:\nCourse successfully added to your schedule!');
         // 3 > Append course to list of registered courses
         registered_courses.push(id);
         // console.log(registered_courses);
@@ -49,7 +49,7 @@ function confirmRegistration(id) {
         localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
     } else {
         // 2 > If course already in list, give error message through visual feedback
-        alert('This course is already in your schedule.');
+        alert('ERROR:\nThis course is already in your schedule.');
     }
 }
 

@@ -51,29 +51,19 @@ function confirmRegistration(id) {
 function showInSchedule() { 
     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
     console.log("Registered list looks like this:", registered_courses);
-    for (course_id in registered_courses) {
+    for (course_index in registered_courses) {
         console.log("Registered list still looks like this:", registered_courses);
-        console.log("Current course ID is:", course_id);
+        console.log("Current course ID is:", registered_courses[course_index]);
         console.log("Now getting every occurence of this course during the week");
-        var list_of_courses_to_be_added = document.getElementsByName("registered_course_"+course_id);
-        console.log("Course", course_id, "occurs these many times during a week:", list_of_courses_to_be_added.length);
+        var list_of_courses_to_be_added = document.getElementsByName("registered_course_"+registered_courses[course_index]);
+        console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
         console.log(list_of_courses_to_be_added);
-        for (course_instance in list_of_courses_to_be_added) {
-            console.log("We are currently working on course instance", course_instance);
-            console.log("This is what the HTML element looks lik:", list_of_courses_to_be_added[course_instance]);
-            console.log("Removing the class that hides the course from schedule");
-            list_of_courses_to_be_added[course_instance].classList.remove("hide_course");
-            console.log("Class successfully removed. Time to repeat!");
+        list_of_courses_to_be_added.forEach(removeHidingClass);
+
+        function removeHidingClass(course_instance) {
+            course_instance.classList.remove("hide_course");
         }
     }
-
-    // try booked_0
-    // loop through registered_courses
-    // for each value (Google for in ) []
-        // remove class "hide_course" to "booked_"+value
-        // Google "find class by name" (might get a list)
-        // remove a class 
-    
 }
 
 
@@ -85,8 +75,3 @@ function showInSchedule() {
 //     showInSchedule()
 // }
 
-
-
-// function hideInSchedule() {
-
-// }

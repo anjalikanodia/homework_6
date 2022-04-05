@@ -71,18 +71,19 @@ function showInSchedule() {
 
 function removeFromSchedule(id) {
     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
+    // Convert list of courses from listt of strings to list of integers
     var registered_courses = registered_courses.map(str => {
         return Number(str);
         });
-    console.log("The current IDs of registered courses are:", registered_courses);
-    console.log("The course we would like to delete is", id);
+    // console.log("The current IDs of registered courses are:", registered_courses);
+    // console.log("The course we would like to delete is", id);
     var index_of_deleted_course = registered_courses.indexOf(id,0);
-    console.log("The item index of this course in the array is:",registered_courses.indexOf(id,0));
+    // console.log("The item index of this course in the array is:",registered_courses.indexOf(id,0));
     if (index_of_deleted_course > -1) {
-        console.log("Since index of course to be deleted is not undefined, proceeding to remove...")
+        // console.log("Since index of course to be deleted is not undefined, proceeding to remove...")
         registered_courses.splice(index_of_deleted_course, 1);
     }
-    console.log(registered_courses)
+    // console.log(registered_courses)
     localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
     showInSchedule();
     document.location.reload();

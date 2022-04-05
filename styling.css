@@ -482,22 +482,47 @@ table {
   color: black;
 }
 
-#booked_0 {
+.booked_0 {
+  width: 240px;
+  height: 45px;
+  display: table-cell;
+  vertical-align: middle;
   background-color: #BB0000;
   border-left: 5px solid #870000;
 }
 
-#booked_1 {
-    background-color: #BB0000;
-    border-left: 5px solid #870000;
+.booked_1 {
+  width: 240px;
+  height: 45px;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #BB0000;
+  border-left: 5px solid #870000;
 }
 
-#booked_2 {
+.booked_2 {
+  width: 240px;
+  height: 45px;
+  display: table-cell;
+  vertical-align: middle;
   background-color: #BB0000;
   border-left: 5px solid #870000;
 } 
 
-#booked_3 {
-    background-color: #BB0000;
-    border-left: 5px solid #870000;
+.booked_3 {
+  width: 240px;
+  height: 45px;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #BB0000;
+  border-left: 5px solid #870000;
+}
+
+.hide_course {
+  visibility: hidden;
+}
+
+.cross_align_right {
+  float: right;
+  margin-right: 10px;
 }

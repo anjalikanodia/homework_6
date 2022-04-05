@@ -11,7 +11,7 @@
   <body onload="changeDescription(sessionStorage.getItem('id'))">
 
      <!-- Top navigation bar --> 
-     <div>
+     <div class="grayed">
       <ul>
         <li class="circle">A</li>
         <li>My Schedule</li>
@@ -91,7 +91,7 @@
 
           <!-- Right Column -->
           <div class="column">
-            <a class= "button" id="column_right" onclick="addCourseToRegisteredList(sessionStorage.getItem('id'))" onclick="confirmRegistration()">Register</a>
+            <a class= "button" id="column_right" onclick="confirmRegistration(sessionStorage.getItem('id'))">Register</a>
           </div>
           
         </div>

@@ -33,32 +33,37 @@ function changeDescription(id) {
 var registered_courses = []
 
 function confirmRegistration(id) {
-    // 1 > On confirming registration, provide visual feeedback
-    alert('Course successfully added to your schedule!');
-    // 2 > Check if registered_courses list exists in local storage: if yes, get the last value of it
+    // 1 > Check if registered_courses list exists in local storage: if yes, get the last value of it
     // This prevents function from starting with an empty list each time and ending up with only 1 course in the list
-    if(localStorage.registered_courses)
-    {
+    if(localStorage.registered_courses) {
         registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
+        // Check if course is not already in list to prevent double adding of same course
     }
-    // 3 > Append course to list of registered courses
-    registered_courses.push(id);
-    // console.log(registered_courses);
-    // 4 > Store appended list in local storage
-    localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
+    if(registered_courses.includes(id) === false) {
+        // 2 > If course not already in list, confirm registration through visual feedback
+        alert('Course successfully added to your schedule!');
+        // 3 > Append course to list of registered courses
+        registered_courses.push(id);
+        // console.log(registered_courses);
+        // 4 > Store appended list in local storage
+        localStorage.setItem("registered_courses", JSON.stringify(registered_courses));
+    } else {
+        // 2 > If course already in list, give error message through visual feedback
+        alert('This course is already in your schedule.');
+    }
 }
 
 function showInSchedule() { 
     // 1 > Retrieve list of courses user has registered for from local storage 
     registered_courses = JSON.parse(localStorage.getItem("registered_courses"));
-    console.log("Registered list looks like this:", registered_courses);
+    // console.log("Registered list looks like this:", registered_courses);
     for (course_index in registered_courses) {
-        console.log("Registered list still looks like this:", registered_courses);
-        console.log("Current course ID is:", registered_courses[course_index]);
-        console.log("Now getting every occurence of this course during the week");
+        // console.log("Registered list still looks like this:", registered_courses);
+        // console.log("Current course ID is:", registered_courses[course_index]);
+        // console.log("Now getting every occurence of this course during the week");
         var list_of_courses_to_be_added = document.getElementsByClassName("registered_course_"+registered_courses[course_index]);
-        console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
-        console.log("These are the courses to be added to the schedule",list_of_courses_to_be_added);
+        // console.log("Course", registered_courses[course_index], "occurs these many times during a week:", list_of_courses_to_be_added.length);
+        // console.log("These are the courses to be added to the schedule",list_of_courses_to_be_added);
         // For each item in list, run a function that removes CSS styling class that hides the course card
         Array.from(list_of_courses_to_be_added).forEach(removeHidingClass);
         function removeHidingClass(course_instance) {
